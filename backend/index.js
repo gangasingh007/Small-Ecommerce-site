@@ -37,6 +37,18 @@ app.post("/api/create",productmiddleware, async (req,res)=>{
     }
 })
 
+app.get("/api/products", async (req, res) => {
+    try {
+        const products = await Product.find({});
+        res.status(200).json({
+            products: products
+        });
+    } catch (err) {
+        res.status(500).json({ error: "Failed to fetch products", details: err.message });
+    }
+});
+
+
 app.listen(3000,()=>{
     Dbconnect();
     console.log("The server has been started on port 3000")
