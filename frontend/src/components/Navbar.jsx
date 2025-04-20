@@ -5,11 +5,12 @@ import './Nav.css'
 const Navbar = () => {
   return (
     <div className="navbar">
-        <div className="right">
         <a href="/">Product Store</a>
+        <div className="right">
         </div>
         <div className="right">
             <a href="/create">
+            Create Product
                 <img src={plusicon} alt="" />
             </a>
         </div>
