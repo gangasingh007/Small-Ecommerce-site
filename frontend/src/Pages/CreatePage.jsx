@@ -36,7 +36,7 @@ const CreatePage = () => {
             const value = e.target.value;
             setname(value)
         }}/>
-        <input type="number" placeholder="Enter the Price of the Product" value={price} onChange={(e)=>{
+        <input type="text" placeholder="Enter the Price of the Product" value={price} onChange={(e)=>{
             const value = e.target.value;
             setprice(value)
         }} />
