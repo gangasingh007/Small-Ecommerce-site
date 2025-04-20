@@ -1,0 +1,46 @@
+/* CreatePage.css */
+
+.page h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-container input {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-container input:focus {
+    border-color: #4a90e2;
+  }
+  
+  .form-container button {
+    padding: 0.8rem;
+    border-radius: 8px;
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #82b1ff;
+  }
+  
