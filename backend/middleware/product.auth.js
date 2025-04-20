@@ -18,6 +18,24 @@ const productmiddleware = async (req,res,next)=>{
     }
 }
 
+const productdeletemidddleware = async(req,res,next)=>{
+    const {id} = req.params;
+
+    const value = await Product.findOne({
+        _id : id
+    })
+    
+    if (value){
+        next()
+    }
+    else{
+        res.status(403).json({
+            msg : "The Product Doesnt Exist"
+        })
+    }
+}
+
 module.exports = {
-    productmiddleware
+    productmiddleware,
+    productdeletemidddleware
 }

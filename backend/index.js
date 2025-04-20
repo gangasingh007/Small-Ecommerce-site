@@ -1,7 +1,7 @@
 const express = require("express");
 const Dbconnect = require("./config/db");
 const dotenv = require("dotenv");
-const { productmiddleware } = require("./middleware/product.auth");
+const { productmiddleware, productdeletemidddleware } = require("./middleware/product.auth");
 const { CreateProduct } = require("./types/product.validation");
 const { Product } = require("./models/product.model");
 
@@ -37,6 +37,22 @@ app.post("/api/create",productmiddleware, async (req,res)=>{
     }
 })
 
+app.put("/api/update/:id",productdeletemidddleware,async (req,res)=>{
+    const {id} = req.params;
+    const product = req.body
+
+    try {
+        await Product.findByIdAndUpdate(id,product,{new:true})
+        res.status(200).json({
+            msg:"The Product has been deleted"
+        })
+    } catch (error) {
+        res.status(403).json({
+            msg:"There was an error deleting the product"
+        })
+    }
+})
+
 app.get("/api/products", async (req, res) => {
     try {
         const products = await Product.find({});
@@ -48,6 +64,21 @@ app.get("/api/products", async (req, res) => {
     }
 });
 
+
+app.get("/api/delete/:id",productdeletemidddleware,async(req,res)=>{
+    const {id} = req.params;
+
+    try {
+        await Product.findByIdAndDelete(id) 
+        res.status(200).json({
+            msg:"The Product has been deleted"
+        })
+    } catch (error) {
+        res.status(401).json({
+            msg:"There was an error deleting tge product"
+        })
+    }
+})
 
 app.listen(3000,()=>{
     Dbconnect();
