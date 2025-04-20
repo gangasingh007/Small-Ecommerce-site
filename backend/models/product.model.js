@@ -2,7 +2,7 @@ const { default: mongoose } = require("mongoose");
 
 const productSchema = new mongoose.Schema({
     name : String,
-    price : Number,
+    price : String,
     image : String
 })
 
