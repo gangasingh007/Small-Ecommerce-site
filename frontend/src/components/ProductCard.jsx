@@ -11,7 +11,7 @@ const ProductCard = ({ name, price, image, onEdit, onDelete }) => {
       </div>
       <div className="info">
         <div className="name">{name}</div>
-        <div className="price">${price}</div>
+        <div className="price">{price}</div>
         <div className="features">
           <div className="edit" onClick={onEdit}>
             <img src={editbtn} alt="Edit" />
