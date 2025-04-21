@@ -3,7 +3,6 @@
 .navbar {
     background: none;
     padding: 1rem 2rem;
-    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
