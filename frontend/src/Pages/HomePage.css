@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #000000; /* match dark theme */
   }
   h1{
@@ -14,8 +14,7 @@
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
-    text-shadow: 0px 0px 5px #4a90e2;
+    text-shadow: 0px 0px 2px #4a90e2;
     justify-content: center;
     margin-top: 20px ;
-    margin-bottom: 40px ;
  }
