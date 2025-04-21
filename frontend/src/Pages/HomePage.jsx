@@ -41,10 +41,10 @@ const HomePage = () => {
         prev.map((item) => (item.id === updatedProduct._id ? updatedProduct : item))
       );
       closeEditModal();
-      fetchProducts();
     } catch (err) {
       console.error("Failed to update product:", err);
     }
+    fetchProducts();
   };
 
   const handleDelete = async () => {
@@ -57,10 +57,10 @@ const HomePage = () => {
         prev.filter((item) => item.id !== deletingProduct.id)
       );
       closeDeleteModal();
-      fetchProducts()
     } catch (err) {
       console.error("Failed to delete product:", err);
     }
+    fetchProducts()
   };
 
   return (
