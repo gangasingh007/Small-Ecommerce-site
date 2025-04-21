@@ -62,5 +62,13 @@ npm run dev
 
 ![Image](https://github.com/user-attachments/assets/fca2ffc1-4bee-4aa5-a5ed-e6fd650d5412)
 
+---
+
+## 🧪 Future Enhancements
+  - 🔐 User login/authentication
+  - 🧠 Search and filter functionality
+  - 🌍 Deploy to Vercel / Render / Railway
+  - 📁 File upload for product images
+
 
 
