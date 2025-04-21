@@ -44,6 +44,15 @@ This is a modern e-commerce product manager built using **React**, **Express**, 
 ```bash
 cd backend
 npm install
+node index.js
+
+```
+
+### 🖥️ Frontend Setup
+
+```bash
+cd frontend
+npm install
 npm run dev
 
 
