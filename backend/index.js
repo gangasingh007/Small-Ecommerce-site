@@ -46,7 +46,7 @@ app.put("/update/:id",productdeletemidddleware,async (req,res)=>{
     try {
         await Product.findByIdAndUpdate(id,product,{new:true})
         res.status(200).json({
-            msg:"The Product has been deleted"
+            msg:"The Product has been updated"
         })
     } catch (error) {
         res.status(403).json({
