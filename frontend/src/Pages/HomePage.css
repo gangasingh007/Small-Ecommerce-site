@@ -1,0 +1,21 @@
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #000000; /* match dark theme */
+  }
+  h1{
+    color: #0a7dff; /* royal blue */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    text-shadow: 0px 0px 5px #4a90e2;
+    justify-content: center;
+    margin-top: 20px ;
+    margin-bottom: 40px ;
+ }
