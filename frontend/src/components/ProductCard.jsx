@@ -3,20 +3,20 @@ import editbtn from "../assets/edit.svg";
 import deletebtn from "../assets/delete.svg";
 import './ProductCard.css';
 
-const ProductCard = (props) => {
+const ProductCard = ({ name, price, image, onEdit, onDelete }) => {
   return (
     <div className="card">
       <div className="image">
-        <img src={props.image} alt={`${props.name}`} />
+        <img src={image} alt={name} />
       </div>
       <div className="info">
-        <div className="name">{props.name}</div>
-        <div className="price">${props.price}</div>
+        <div className="name">{name}</div>
+        <div className="price">${price}</div>
         <div className="features">
-          <div className="edit">
+          <div className="edit" onClick={onEdit}>
             <img src={editbtn} alt="Edit" />
           </div>
-          <div className="Delete">
+          <div className="Delete" onClick={onDelete}>
             <img src={deletebtn} alt="Delete" />
           </div>
         </div>

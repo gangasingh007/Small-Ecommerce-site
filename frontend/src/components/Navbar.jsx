@@ -10,7 +10,6 @@ const Navbar = () => {
         </div>
         <div className="right">
             <a href="/create">
-            Create Product
                 <img src={plusicon} alt="" />
             </a>
         </div>
